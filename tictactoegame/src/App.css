@@ -2,20 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ background-color:pink;
 }
 
 .square {
-  height: 50px;
-  width: 50px;
+  height: 110px;
+  width: 110px;
   background: #fff;
-  border: 1px solid #999;
+  border: 1px solid blueviolet;
   font-size: 32px;
+  color: blue;
   font-weight: bolder;
   float: left;
+  margin-bottom: 10px;
+  margin-left:10px;
 }
+
 .square:hover {
   cursor: pointer;
-  background: #ddd;
+  background: yellowgreen;
 }
 
 .game {
@@ -23,10 +28,13 @@
 }
 
 .game-board {
-  margin: 30px;
+  margin:200px;
 }
+
 h1 {
   text-align: center;
+  color:blue;
+  font-family: 'sans-serif';
 }
 .game-info {
   margin-top: 30px;
@@ -34,13 +42,20 @@ h1 {
 .status {
   font-size: 20px;
   font-weight: bold;
+  color:green;
+  font-family: 'Courier New', Courier, monospace;
   padding: 0 20px;
 }
+
 .history {
   padding: 10px 20px;
+  
 }
 .history button {
   padding: 3px;
+  color:purple;
+  font-size: 20px;
+  border-radius: 5px;
 }
 .history li {
   padding: 3px;

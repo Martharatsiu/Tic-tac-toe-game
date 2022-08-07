@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Board from "./Board";
 
-const Game = () => {
+export default function Game()  {
     const [history, setHistory] = useState([{ squares: Array(9).fill(null) }]);
     const [xIsNext, setXIsNext] = useState(true);
     const [stepNo, setStepNo] = useState(0);
@@ -17,7 +17,7 @@ const Game = () => {
     };
 
     const moves = history.map((_step, move) => {
-        const desc = move ? `Go to move ${move}` : `Go to game start`;
+        const desc = move ? `Go to move ${move}` : `RESTART GAME`;
         return (
             <li>
                 <button onClick={() => jumpTo(move)}>{desc}</button>
@@ -49,6 +49,7 @@ const Game = () => {
             [0, 4, 8],
             [2, 4, 6],
         ];
+
         for (let i = 0; i < lines.length; i++) {
             const [a, b, c] = lines[i];
             if (
@@ -60,6 +61,7 @@ const Game = () => {
             }
         }
     };
+    
     return (
         <div className="game">
             <div className="game-board">
@@ -76,4 +78,4 @@ const Game = () => {
     );
 };
 
-export default Game;
+
